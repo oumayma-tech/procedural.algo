@@ -1,15 +1,14 @@
-FUNCTION dot_product(V1,V2) : INTEGER
+FUNCTION dot_product(V1,V2:ARRAY_OF INTEGER[20];) : INTEGER
 VAR
- V1,V2 : ARRAY_OF INTEGER[20];
  i:INTEGER
  ps=0
 BEGIN
 IF (V1.length=V2.length) THEN
 FOR i FROM 0 TO V1.length-1 STEP 1  DO
   ps=ps+V1[i]*V2[i]
+  END_FOR
   ELSE 
   write('erreur')
-END_FOR
 END_IF
 RETURN ps ;  
 END 
