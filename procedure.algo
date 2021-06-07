@@ -1,0 +1,30 @@
+PROCEDURE   doT_product( V1,V2:ARRAY_OF INTEGER [20]; var ps:=0:INTEGER)
+VAR
+ i :INTEGER;
+
+BEGIN
+IF (V1.length=V2.length) THEN
+FOR i FROM 0 TO V1.length-1 STEP 1  DO
+  ps:=ps+V1[i]*V2[i]
+  ELSE 
+  write('erreur')
+ END_IF
+ END_FOR
+ write(ps)  
+END 
+
+
+ ALGORITHM algo_test
+ VAR
+     V1,V2 : ARRAY_OF INTEGER[20];
+     ps:INTEGER;
+   
+ BEGIN
+ doT_product(v1,v2,ps)
+    IF (ps=0) THEN
+        write('les deux vecteurs sont orthogonaux')
+      END_IF
+  
+ END 
+  
+ 
