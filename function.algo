@@ -19,8 +19,10 @@ END
  ALGORITHM algo_test
  VAR
      V1,V2 : ARRAY_OF INTEGER[20];
+     ps:INTEGER:=0
  BEGIN
-    IF (dot_product(v1,v2)=0) THEN
+   ps:=dot_product(v1,v2)
+    IF ps=0 THEN
         write('les deux vecteurs sont orthogonaux')
       END_IF
   
